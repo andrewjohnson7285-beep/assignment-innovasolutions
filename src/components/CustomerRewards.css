@@ -1,0 +1,239 @@
+.customer-card {
+    background: rgba(30, 30, 50, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(139, 92, 246, 0.15);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.customer-card:hover {
+    border-color: rgba(139, 92, 246, 0.35);
+    box-shadow: 0 0 24px rgba(139, 92, 246, 0.08);
+}
+
+.customer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(59, 130, 246, 0.06));
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.customer-info {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.customer-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.customer-name {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    margin: 0;
+}
+
+.customer-id {
+    font-size: 0.78rem;
+    color: #64748b;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+.total-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.15rem;
+}
+
+.total-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #64748b;
+}
+
+.total-value {
+    font-size: 1.35rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #a78bfa, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ── Month toggle ── */
+.months-container {
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.month-section {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.month-toggle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    color: #cbd5e1;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.9rem;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.month-toggle:hover {
+    background: rgba(139, 92, 246, 0.06);
+    border-color: rgba(139, 92, 246, 0.15);
+}
+
+.month-toggle.expanded {
+    background: rgba(139, 92, 246, 0.06);
+    border-color: rgba(139, 92, 246, 0.2);
+    border-radius: 10px 10px 0 0;
+}
+
+.month-info {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.month-chevron {
+    color: #8b5cf6;
+    font-size: 0.85rem;
+    width: 14px;
+    text-align: center;
+}
+
+.month-label {
+    font-weight: 500;
+}
+
+.txn-count {
+    font-size: 0.75rem;
+    color: #64748b;
+    background: rgba(100, 116, 139, 0.15);
+    padding: 0.15rem 0.55rem;
+    border-radius: 100px;
+}
+
+.month-points {
+    font-weight: 600;
+    color: #a78bfa;
+    font-size: 0.9rem;
+}
+
+/* ── Transactions table ── */
+.transactions-table-wrap {
+    border: 1px solid rgba(139, 92, 246, 0.15);
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.transactions-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.transactions-table thead {
+    background: rgba(139, 92, 246, 0.06);
+}
+
+.transactions-table th {
+    padding: 0.6rem 1rem;
+    text-align: left;
+    font-weight: 500;
+    color: #94a3b8;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.transactions-table td {
+    padding: 0.6rem 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    color: #cbd5e1;
+}
+
+.transactions-table tbody tr:hover {
+    background: rgba(139, 92, 246, 0.04);
+}
+
+.transactions-table .amount {
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 0.85rem;
+}
+
+.points-cell {
+    text-align: left;
+}
+
+.points-badge {
+    display: inline-block;
+    min-width: 36px;
+    text-align: center;
+    padding: 0.15rem 0.55rem;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    background: rgba(139, 92, 246, 0.15);
+    color: #a78bfa;
+}
+
+.points-badge.zero {
+    background: rgba(100, 116, 139, 0.12);
+    color: #64748b;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+    .customer-header {
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: flex-start;
+    }
+
+    .total-badge {
+        align-items: flex-start;
+    }
+}

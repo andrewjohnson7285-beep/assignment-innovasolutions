@@ -1,0 +1,100 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    margin: 0;
+}
+
+.section-icon {
+    font-size: 1.2rem;
+}
+
+/* ── Summary table ── */
+.table-wrap {
+    background: rgba(30, 30, 50, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(139, 92, 246, 0.15);
+    border-radius: 16px;
+    overflow-x: auto;
+}
+
+.summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.summary-table thead {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(59, 130, 246, 0.07));
+}
+
+.summary-table th {
+    padding: 0.85rem 1.15rem;
+    text-align: left;
+    font-weight: 500;
+    color: #94a3b8;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+}
+
+.summary-table td {
+    padding: 0.85rem 1.15rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    color: #cbd5e1;
+}
+
+.summary-table tbody tr {
+    transition: background 0.15s ease;
+}
+
+.summary-table tbody tr:hover {
+    background: rgba(139, 92, 246, 0.05);
+}
+
+.name-cell {
+    font-weight: 500;
+    color: #e2e8f0;
+    white-space: nowrap;
+}
+
+.num-cell {
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    text-align: center;
+    font-size: 0.88rem;
+}
+
+.total-col {
+    font-weight: 700;
+    background: rgba(139, 92, 246, 0.06);
+    color: #a78bfa !important;
+}
+
+/* ── Cards grid ── */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    gap: 1.25rem;
+}
+
+@media (max-width: 500px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
